@@ -6,7 +6,7 @@ TOKEN = os.getenv("FOOTBALL_DATA_TOKEN")
 HEADERS = {"X-Auth-Token": TOKEN}
 BASE = "https://api.football-data.org/v4"
 
-COMPETITIONS = ["PL", "BL1", "SA", "PPL"]
+COMPETITIONS = ["PL", "BL1", "SA", "PPL", "FL1", "PD", "ELC", "CL"]
 SEASONS = [2024, 2025, 2026]  # 2025 = musim 2025/26
 
 for comp in COMPETITIONS:

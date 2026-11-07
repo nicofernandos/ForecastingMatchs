@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from model import load, fit, predict, rps
 
 XI, REG = 0.0019, 3.0
-COMPS = ["PL", "BL1", "SA", "PPL"]
+COMPS = ["PL", "BL1", "SA", "PPL", "FL1", "PD", "ELC", "CL"]
 SEASON = 2026
 BASE = "https://api.football-data.org/v4"
 ISO = "%Y-%m-%dT%H:%M:%SZ"
@@ -112,7 +112,7 @@ def report():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=7)
-    ap.add_argument("--refresh", action="store_true", help="ambil ulang data musim berjalan (4 request)")
+    ap.add_argument("--refresh", action="store_true", help="ambil ulang data musim berjalan (8 request)")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--report", action="store_true", help="isi hasil laga selesai & hitung skor")
     a = ap.parse_args()
